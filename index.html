@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Owner authorization — THUNVIET V2</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://nlcsjeschnlonixmvxxp.supabase.co; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+<main>
+  <h1>Owner authorization</h1>
+  <p class="lede">
+    Ký receipt cho <strong>một</strong> requirement. Chữ ký bind vào toàn bộ nội dung
+    bên dưới — đổi bất kỳ dòng nào, receipt tự vô hiệu.
+  </p>
+
+  <section id="envelope" hidden>
+    <dl>
+      <dt>Requirement</dt><dd id="f-requirement"></dd>
+      <dt>Revision</dt><dd id="f-revision"></dd>
+      <dt>Persona</dt><dd id="f-persona"></dd>
+      <dt>Owned paths</dt><dd><ul id="f-paths"></ul></dd>
+      <dt>Contract version</dt><dd id="f-contract"></dd>
+      <dt>Trello board</dt><dd id="f-board"></dd>
+      <dt>Trello card</dt><dd id="f-card"></dd>
+      <dt>Ready list</dt><dd id="f-list"></dd>
+      <dt>Nonce</dt><dd id="f-nonce"></dd>
+      <dt>Envelope SHA-256</dt><dd id="f-digest"></dd>
+    </dl>
+
+    <details>
+      <summary>Canonical bytes được ký</summary>
+      <pre id="f-canonical"></pre>
+    </details>
+
+    <button id="sign" type="button">Ký bằng YubiKey</button>
+  </section>
+
+  <section id="enroll" hidden>
+    <h2>Đăng ký YubiKey</h2>
+    <p>Chưa có credential nào. Chỉ làm được một lần, cần bootstrap token.</p>
+    <label for="token">Bootstrap token</label>
+    <input id="token" type="password" autocomplete="off" spellcheck="false" />
+    <button id="do-enroll" type="button">Đăng ký khóa</button>
+  </section>
+
+  <p id="status" role="status" aria-live="polite"></p>
+</main>
+
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
