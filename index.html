@@ -1,15 +1,10 @@
-<!doctype html>
-<html lang="vi">
-<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://nlcsjeschnlonixmvxxp.supabase.co/functions/v1/owner-authorization; base-uri 'none'; form-action 'none'" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
 <title>Owner authorization — THUNVIET V2</title>
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://nlcsjeschnlonixmvxxp.supabase.co; base-uri 'none'; form-action 'none'">
 <link rel="stylesheet" href="styles.css" />
 
-</head>
-<body>
 <main>
   <h1>Owner authorization</h1>
   <p class="lede">
@@ -19,13 +14,15 @@
 
   <section id="envelope" hidden>
     <dl>
-      <dt>Requirement</dt><dd id="f-requirement"></dd>
-      <dt>Revision</dt><dd id="f-revision"></dd>
+      <dt>Command</dt><dd id="f-command"></dd>
+      <dt>Trello card</dt><dd id="f-card"></dd>
       <dt>Persona</dt><dd id="f-persona"></dd>
       <dt>Owned paths</dt><dd><ul id="f-paths"></ul></dd>
+      <dt>Expires</dt><dd id="f-expires"></dd>
+      <dt>Requirement</dt><dd id="f-requirement"></dd>
+      <dt>Revision</dt><dd id="f-revision"></dd>
       <dt>Contract version</dt><dd id="f-contract"></dd>
       <dt>Trello board</dt><dd id="f-board"></dd>
-      <dt>Trello card</dt><dd id="f-card"></dd>
       <dt>Ready list</dt><dd id="f-list"></dd>
       <dt>Nonce</dt><dd id="f-nonce"></dd>
       <dt>Envelope SHA-256</dt><dd id="f-digest"></dd>
@@ -51,6 +48,3 @@
 </main>
 
 <script type="module" src="main.js"></script>
-
-</body>
-</html>
